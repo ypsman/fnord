@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     url(r'^$', 'home.views.index', name='home'),
     # url(r'^blog/', include('blog.urls')),
     #url(r'^/', fnord.views.home)
+    url(r'^forum/', include('django_simple_forum.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout'),
