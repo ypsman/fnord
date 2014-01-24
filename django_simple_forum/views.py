@@ -13,7 +13,7 @@ from django.core.context_processors import csrf
 from django_simple_forum.models import Forum, Topic, Post
 from django_simple_forum.forms import TopicForm, PostForm
 
-# my changes for 1.6
+# my changes for 1.6 guest dont work
 from django.contrib.auth.decorators import login_required
 
 #from guest.decorators import guest_allowed, login_required
