@@ -6,11 +6,14 @@ admin.autodiscover()
 urlpatterns = patterns('',
     # Examples:
     #url(r'^$', 'home.views.index', name='home'),
+    url(r'^accounts/', include('userprofile.urls')),
     url(r'^$', 'home.views.index', name='home'),
+    
     # url(r'^blog/', include('blog.urls')),
     #url(r'^/', fnord.views.home)
     url(r'^forum/', include('django_simple_forum.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'),
     url(r'^accounts/logout/$', 'django.contrib.auth.views.logout'),
     url(r'^accounts/password_change/$', 'django.contrib.auth.views.password_change'),
