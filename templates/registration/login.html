@@ -1,0 +1,39 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="{% static "login/css/style.css" %}" />
+  	<title>tv Password Tool</title>
+</head>
+<body>
+<div id="headerbar">
+</div>
+</div>
+
+  <form method="post" action="{% url 'django.contrib.auth.views.login' %}" class="login">
+  {% csrf_token %}
+    <p>
+      <label for="login">Username:</label>
+      {{ form.username }}
+    </p>
+
+    <p>
+      <label for="password">Password:</label>
+      {{ form.password }}
+    </p>
+
+    <p class="login-submit">
+      <button type="submit" class="login-button" value="log in">Login</button>
+    </p>
+
+  </form>
+
+
+  <section class="about">
+     <p>
+{% if form.errors %}
+<p>Your username and password didn't match. Please try again.</p>
+{% endif %}</p>
+  </section>
+</body>
+</html>

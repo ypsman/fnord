@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+{% if news %}
+        <ul>
+            <div class="box"
+            <h1>MEEEP</h1><br>
+            {% for news in news %}
+            <h1 class="the-title">{{ news.head }}</h1>
+
+
+            <div class="cont">
+            <div class="list-view">
+                <p>
+                    <textarea style="width:100%; height:160px;" name="cpurl" disabled>{{ news.text }} </textarea>
+                <br><br>
+            </div>
+            </div>
+            {% endfor %}
+            </div>
+        </ul>
+{% endif %}
+<h1>{{ news.head }}</h1>
+{% endblock %}
